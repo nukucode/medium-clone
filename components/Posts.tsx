@@ -25,7 +25,13 @@ export function Posts({ posts }: Posts) {
                             <p className="text-xs">{post.description}</p>
                         </div>
                         <div>
-                            <Image className="w-12 h-12 rounded-full" width={100} height={100} src={urlFor(post.author.image.asset._ref).url()!} alt={post.author.name} />
+
+                            <Image
+                                width="100"
+                                height="100"
+                                className="w-12 h-12 rounded-full"
+                                src={urlFor(post.author.image.asset._ref).url()!} alt={post.author.name} />
+
                         </div>
                     </div>
                 </div>
