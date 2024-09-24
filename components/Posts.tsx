@@ -9,7 +9,6 @@ interface Posts {
 }
 
 export function Posts({ posts }: Posts) {
-    console.log('🤗', posts)
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6">
             {posts && React.Children.toArray(posts.map((post) => <Link href={`/post/${post.slug.current}`}>
@@ -27,9 +26,10 @@ export function Posts({ posts }: Posts) {
                         <div>
 
                             <Image
-                                width="100"
-                                height="100"
-                                className="w-12 h-12 rounded-full"
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                className="w-12 mx-2 h-12 rounded-full object-cover"
                                 src={urlFor(post.author.image.asset._ref).url()!} alt={post.author.name} />
 
                         </div>

@@ -36,8 +36,6 @@ export default function PostPage() {
         fetchData();
     }, [params])
 
-    console.trace('👸', post)
-
     return (
         <main>
             <Header />
